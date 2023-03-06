@@ -1,0 +1,37 @@
+<h1>Formulario</h1>
+<hr />
+<form [formGroup]="formulario" (ngSubmit)="submitForm()">
+  <label>
+    Nombre Completo:
+    <input type="text" formControlName="nombre" />
+  </label>
+
+  <label>
+    Edad:
+    <input type="email" formControlName="edad" [(ngModel)]="edad" />
+  </label>
+
+  <label>
+    Fecha Nacimiento:
+    <input
+      type="date"
+      formControlName="fecha_nacimiento"
+      [(ngModel)]="fechaNacimiento"
+    />
+  </label>
+  <label>
+    Fecha Inscripcion:
+    <input
+      type="date"
+      formControlName="fecha_inscripcion"
+      [(ngModel)]="fechaInscripcion"
+    />
+  </label>
+
+  <label>
+    Costo:
+    <input type="tel" formControlName="costo" />
+  </label>
+
+  <button type="submit">Enviar</button>
+</form>
